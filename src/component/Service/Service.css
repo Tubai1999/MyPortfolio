@@ -1,0 +1,60 @@
+.myservice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.service-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.services-format{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    /* width: 420px; */
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format h4{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.services-format h3{
+    font-size: 38px;
+    font-weight: 600;
+    background: linear-gradient(270deg, #DF8908 50%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-format p{
+    color: #d4d4d4;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 300px;
+}
+
+.services-format:hover{
+    border: 2px solid palevioletred;
+    background-image: linear-gradient(127deg, #4130ac 50%, #9138ac 80%);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
