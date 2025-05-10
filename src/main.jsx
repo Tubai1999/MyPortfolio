@@ -5,6 +5,7 @@ import Navbar from "./component/Navbar/Navbar";
 import Hero from "./component/Hero/Hero";
 import About from "./component/About/About";
 import Service from "./component/Service/Service";
+import MyWork from "./component/MyWork/MyWork";
 // import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -13,5 +14,6 @@ createRoot(document.getElementById("root")).render(
     <Hero />
     <About />
     <Service />
+    <MyWork />
   </StrictMode>
 );

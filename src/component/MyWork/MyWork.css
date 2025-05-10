@@ -1,0 +1,52 @@
+.Mywork-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 170px;
+} 
+
+.Mywork-title{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.Mywork-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.Mywork-singleImage img{
+    height: 300px;
+    width: 350px;
+    border-radius: 20px;
+    transition: 0.6s ease-in-out;
+    
+}
+
+.Mywork-singleImage img:hover{
+    transform: scale(1.05);
+    box-sizing: border-box;
+    border: 2px solid palevioletred;
+    cursor: pointer;
+}
+
+.Mywork-showmore{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.Mywork-showmore:hover{
+    border: 2px solid rebeccapurple;
+    transform: scale(1.05);
+}
