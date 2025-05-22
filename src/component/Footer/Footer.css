@@ -31,6 +31,10 @@
     border-radius: 50px;
  }
 
+ .email-input:hover{
+   border: 3px solid white;
+ }
+
  .email-input input{
     outline: none;
     border: none;
@@ -39,6 +43,7 @@
     color: aliceblue;
  }
 
+ 
  .subsscribe-button{
     background: linear-gradient(270deg, #DF8908 50%, #B415FF 100%);
     padding: 20px 50px;

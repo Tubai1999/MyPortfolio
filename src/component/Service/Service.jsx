@@ -6,7 +6,7 @@ const Service = () => {
   console.log(skills);
 
   return (
-    <div className="myservice">
+    <div id="service" className="myservice">
       <div className="service-title">
         <h1>MyServices</h1>
       </div>

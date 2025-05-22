@@ -3,8 +3,33 @@ import "./Contact.css";
 import { Email, LocationCity, Phone } from "@mui/icons-material";
 
 const Contact = () => {
+  const [result, setResult] = React.useState("");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "cfc2ab10-86d2-4ba0-88de-05c4fbafb413");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert(data.message);
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div className="contact-title">
         <h2>Get in touch</h2>
       </div>
@@ -31,14 +56,20 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form className="right-container">
+        <form onSubmit={onSubmit} className="right-container">
           <label>your name</label>
-          <input type="text" placeholder="Enter your name" />
+          <input name="name" type="text" placeholder="Enter your name" />
           <label> your email</label>
-          <input type="text" placeholder="Enter your mail" />
+          <input name="email" type="text" placeholder="Enter your mail" />
           <label>Write your message</label>
-          <textarea rows="10" placeholder="enter your msg"></textarea>
-          <button className="contact-submit">submit</button>
+          <textarea
+            name="message"
+            rows="10"
+            placeholder="enter your msg"
+          ></textarea>
+          <button className="contact-submit" type="submit">
+            submit
+          </button>
         </form>
       </div>
     </div>

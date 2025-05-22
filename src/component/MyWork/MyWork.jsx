@@ -6,7 +6,7 @@ import { ArrowForward } from "@mui/icons-material";
 
 const MyWork = () => {
   return (
-    <div className="Mywork-container">
+    <div id="portfolio" className="Mywork-container">
       <div className="Mywork-title">
         <h2>My Works</h2>
       </div>
