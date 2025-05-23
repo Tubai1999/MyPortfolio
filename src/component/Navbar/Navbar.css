@@ -1,44 +1,81 @@
- .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 170px;
- }
-
- .nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
- }
-
-  .nav-menu li{
-   cursor: pointer;
-  }
-
-  .nav-menu li:hover{
-   text-decoration: underline;
-  }
-
- .nav-each{
-   /* text-decoration: underline; */
-   background-color: aqua;
-   padding: 5px;
-   border-radius: 20px;
-   color: black;
- }
-
- .nav-connect{
-    padding:20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25, 0.36%, #B923E1, 100.12%);
-    background-color: #B923E1;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
 }
 
-.nav-connect:hover{
-    transform: scale(1.05);
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+}
+
+.nav-menu li:hover {
+  text-decoration: underline;
+}
+
+.nav-each {
+  /* text-decoration: underline; */
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 20px;
+  color: black;
+}
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25, 0.36%, #b923e1, 100.12%);
+  background-color: #b923e1;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 780px) {
+  .navbar {
+    margin: 20px 60px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+
+  /* .nav-mob-open {
+    position: "fixed";
+    right: 30;
+    top: 20;
+    background-color: "#B923E1";
+    padding: "8px";
+    border-radius: "50%";
+    color: "white";
+    z-index: 1000;
+  } */
+   .nav-menu{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      top:0;
+      /* left: 0; */
+      height: 100%;
+      width: 250px;
+      right: -250px;
+      background-color: #570404;
+      transition: 0.3s ease;
+      z-index: 2;
+   }
 }

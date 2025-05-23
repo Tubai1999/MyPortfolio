@@ -1,19 +1,50 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/react.svg";
 import { Link } from "react-scroll";
+import { Close, Menu } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const menuRef = useRef();
+
+  const openMenu = () => {
+    menuRef.current.style.right = "0";
+  };
+
+  const closeMenu = () => {
+    menuRef.current.style.right = "-250px";
+  };
 
   const handleNavbar = (value) => {
     setMenu(value);
   };
+  const isDesktop = useMediaQuery("(min-width:781px)");
 
   return (
     <div className="navbar">
       <img src={logo} alt="react image" />
-      <ul className="nav-menu">
+      {!isDesktop && (
+        <Menu
+          onClick={openMenu}
+          sx={{
+            position: "fixed",
+            right: 30,
+            top: 20,
+            backgroundColor: "#B923E1",
+            padding: "8px",
+            borderRadius: "50%",
+            color: "white",
+            zIndex: 1,
+          }}
+        />
+      )}
+
+      <ul className="nav-menu" ref={menuRef}>
+        {!isDesktop && (
+          <Close sx={{ position: "absolute", right: 0 }} onClick={closeMenu} />
+        )}
         <li
           onClick={() => handleNavbar("home")}
           className={menu === "home" ? "nav-each" : ""}
