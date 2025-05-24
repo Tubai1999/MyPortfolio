@@ -17,7 +17,9 @@ const Service = () => {
               <h4>{skill.id}</h4>
               <h3>{skill.skill}</h3>
               <p>{skill.skillDescription}</p>
-              <p>Read more</p>
+              <div className="read-more">
+                <p>Read more</p>
+              </div>
             </div>
           );
         })}
